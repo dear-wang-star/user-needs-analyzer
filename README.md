@@ -1,35 +1,34 @@
 # user-needs-analyzer
 
-`user-needs-analyzer` is a V1.0 skill for turning raw user materials into traceable user-need conclusions.
+An evidence-based V1.0 skill for traceable user-needs analysis.
 
-## Project Purpose
+## 这是什么
 
-Use this repository when you need to analyze raw feedback and decide whether it supports a real user need rather than jumping directly to a feature idea.
+`user-needs-analyzer` 是一个面向用户需求分析的 Skill，用来把访谈、反馈、工单和开放题材料整理成可追溯的需求结论，而不是直接把用户原话改写成功能清单。
 
-## Supported Input Types
+## 能解决什么问题
 
-- User interview notes and verbatim quotes
-- Product feedback and feature requests
-- Support tickets and service-adjacent feedback
-- Survey free-text answers
-- Mixed qualitative evidence sets with stable source IDs
+- 帮助分析者区分“用户真正需要什么”和“用户提出希望做什么”
+- 帮助把零散反馈整理为结构化证据
+- 帮助判断某条候选需求是 `validated`、`conditionally_validated`、`need_hypothesis`、`insufficient_evidence` 还是 `invalid_or_out_of_scope`
+- 帮助输出可继续讨论的需求分析结果，而不是直接进入产品排期
 
-## Core Analysis Capabilities
+## 支持哪些输入材料
 
-- Evidence classification and evidence-to-need traceability
-- Separation of user needs from user-proposed solutions
-- Requirement validity judgment using fixed verdict labels
-- Counterexample review and user-segment difference checks
-- Relative need-side prioritization
+- 用户访谈纪要和原话
+- 用户反馈与功能建议
+- 客服工单和服务相关反馈
+- 问卷开放题
+- 带有稳定 source ID 的混合定性材料
 
-## Output Artifacts
+## 输出什么
 
 - `evidence-table.md`
 - `need-card-Nxxx.md`
 - `needs-ranking.md`
 - `final-report.md`
 
-## Minimal Usage Example
+## 最简单的使用方式
 
 ```text
 Please use user-needs-analyzer to analyze the following user feedback,
@@ -37,74 +36,14 @@ and follow SKILL.md to output an evidence table, user need cards,
 needs ranking, and an analysis report.
 ```
 
-## Validation Commands
+## V1.0 的能力边界
 
-Run the built-in validation scripts from the repository root:
+当前版本可以：
+- 基于证据整理和分析用户需求
+- 区分需求、解决方案和相邻问题
+- 做需求成立性判断和需求侧相对排序
 
-```bash
-python3 scripts/validate_input.py PATH_TO_RAW_INPUT --json
-python3 scripts/validate_evidence_links.py \
-  --evidence-table PATH_TO_EVIDENCE_TABLE \
-  --need-cards PATH_TO_NEED_CARD_OR_DIR \
-  --ranking PATH_TO_NEEDS_RANKING \
-  --report PATH_TO_FINAL_REPORT \
-  --json
-python3 scripts/validate_report.py \
-  --need-cards PATH_TO_NEED_CARD_OR_DIR \
-  --ranking PATH_TO_NEEDS_RANKING \
-  --report PATH_TO_FINAL_REPORT \
-  --json
-```
-
-## V1.0 Boundaries
-
-V1.0 can:
-- classify evidence and distinguish needs from adjacent issues;
-- judge whether a candidate need is validated, conditionally validated, hypothetical, insufficiently supported, or out of scope;
-- rank candidate needs on the demand side only.
-
-V1.0 does not:
-- prove market size or business opportunity size;
-- decide engineering delivery order or product roadmap sequencing;
-- auto-generate a final feature specification from limited evidence.
-
-## Structure
-
-```text
-.
-├── AGENTS.md
-├── IMPLEMENTATION_PLAN.md
-├── LICENSE
-├── README.md
-├── SKILL.md
-├── examples
-│   ├── interview-synthesis
-│   │   └── .gitkeep
-│   ├── single-feature-request
-│   │   ├── evidence-table.md
-│   │   ├── final-report.md
-│   │   ├── need-card-N001.md
-│   │   ├── needs-ranking.md
-│   │   └── raw-feedback.txt
-│   └── support-ticket-analysis
-│       └── .gitkeep
-├── references
-│   ├── evidence-strength.md
-│   ├── evidence-taxonomy.md
-│   ├── need-vs-solution.md
-│   ├── prioritization-rules.md
-│   └── requirement-validation.md
-├── scripts
-│   ├── validate_evidence_links.py
-│   ├── validate_input.py
-│   └── validate_report.py
-├── templates
-│   ├── evidence-table.md
-│   ├── final-report.md
-│   ├── needs-ranking.md
-│   └── user-need-card.md
-└── tests
-    ├── insufficient-evidence-cases.json
-    ├── normal-cases.json
-    └── trap-cases.json
-```
+本 Skill 不负责：
+- 证明市场规模或商业规模
+- 自动决定产品路线图或研发排期
+- 直接生成最终功能方案或 PRD
