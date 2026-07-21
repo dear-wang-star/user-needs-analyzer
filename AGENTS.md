@@ -10,14 +10,14 @@ The repository must help future maintainers:
 
 # Repository Structure and Directory Responsibilities
 
-- [SKILL.md](/Users/wangxiaohui/projects/user-needs-analyzer/SKILL.md:1): executable skill entry protocol, workflow, inputs, outputs, and hard guardrails.
-- [AGENTS.md](/Users/wangxiaohui/projects/user-needs-analyzer/AGENTS.md:1): repository maintenance rules for Codex and other agents.
-- [IMPLEMENTATION_PLAN.md](/Users/wangxiaohui/projects/user-needs-analyzer/IMPLEMENTATION_PLAN.md:1): build roadmap and V1.0 boundary record.
-- [references/](/Users/wangxiaohui/projects/user-needs-analyzer/references): method rules, classification logic, validation criteria, evidence-strength rules, and prioritization rules.
-- [templates/](/Users/wangxiaohui/projects/user-needs-analyzer/templates): output structures for evidence tables, need cards, ranking views, and final reports.
-- [scripts/](/Users/wangxiaohui/projects/user-needs-analyzer/scripts): validation utilities for inputs, evidence links, and report structure.
-- [examples/](/Users/wangxiaohui/projects/user-needs-analyzer/examples): fictional sample cases only.
-- [tests/](/Users/wangxiaohui/projects/user-needs-analyzer/tests): structured cases that verify classification, validity judgment, and ranking behavior.
+- `SKILL.md`: executable skill entry protocol, workflow, inputs, outputs, and hard guardrails.
+- `AGENTS.md`: repository maintenance rules for Codex and other agents.
+- `IMPLEMENTATION_PLAN.md`: build roadmap and V1.0 boundary record.
+- `references/`: method rules, classification logic, validation criteria, evidence-strength rules, and prioritization rules.
+- `templates/`: output structures for evidence tables, need cards, ranking views, and final reports.
+- `scripts/`: validation utilities for inputs, evidence links, and report structure.
+- `examples/`: fictional sample cases only.
+- `tests/`: structured cases that verify classification, validity judgment, and ranking behavior.
 
 # Modification Principles
 
@@ -55,26 +55,26 @@ The repository must help future maintainers:
 
 # Where New Rules Must Go
 
-- Evidence-type definitions belong in [references/evidence-taxonomy.md](/Users/wangxiaohui/projects/user-needs-analyzer/references/evidence-taxonomy.md:1).
-- Need vs solution and issue-boundary rules belong in [references/need-vs-solution.md](/Users/wangxiaohui/projects/user-needs-analyzer/references/need-vs-solution.md:1).
-- Requirement validity logic belongs in [references/requirement-validation.md](/Users/wangxiaohui/projects/user-needs-analyzer/references/requirement-validation.md:1).
-- Evidence hierarchy or confidence rules belong in [references/evidence-strength.md](/Users/wangxiaohui/projects/user-needs-analyzer/references/evidence-strength.md:1).
-- Demand-side ranking rules belong in [references/prioritization-rules.md](/Users/wangxiaohui/projects/user-needs-analyzer/references/prioritization-rules.md:1).
-- Workflow and guardrails belong in [SKILL.md](/Users/wangxiaohui/projects/user-needs-analyzer/SKILL.md:1).
-- Build sequencing or scope changes belong in [IMPLEMENTATION_PLAN.md](/Users/wangxiaohui/projects/user-needs-analyzer/IMPLEMENTATION_PLAN.md:1).
+- Evidence-type definitions belong in `references/evidence-taxonomy.md`.
+- Need vs solution and issue-boundary rules belong in `references/need-vs-solution.md`.
+- Requirement validity logic belongs in `references/requirement-validation.md`.
+- Evidence hierarchy or confidence rules belong in `references/evidence-strength.md`.
+- Demand-side ranking rules belong in `references/prioritization-rules.md`.
+- Workflow and guardrails belong in `SKILL.md`.
+- Build sequencing or scope changes belong in `IMPLEMENTATION_PLAN.md`.
 
 # If Output Structure Changes
 
 When changing output fields, order, or labels, update all affected templates and tests together.
 
 At minimum, review and update:
-- [templates/evidence-table.md](/Users/wangxiaohui/projects/user-needs-analyzer/templates/evidence-table.md:1)
-- [templates/user-need-card.md](/Users/wangxiaohui/projects/user-needs-analyzer/templates/user-need-card.md:1)
-- [templates/needs-ranking.md](/Users/wangxiaohui/projects/user-needs-analyzer/templates/needs-ranking.md:1)
-- [templates/final-report.md](/Users/wangxiaohui/projects/user-needs-analyzer/templates/final-report.md:1)
-- [tests/normal-cases.json](/Users/wangxiaohui/projects/user-needs-analyzer/tests/normal-cases.json:1)
-- [tests/insufficient-evidence-cases.json](/Users/wangxiaohui/projects/user-needs-analyzer/tests/insufficient-evidence-cases.json:1)
-- [tests/trap-cases.json](/Users/wangxiaohui/projects/user-needs-analyzer/tests/trap-cases.json:1)
+- `templates/evidence-table.md`
+- `templates/user-need-card.md`
+- `templates/needs-ranking.md`
+- `templates/final-report.md`
+- `tests/normal-cases.json`
+- `tests/insufficient-evidence-cases.json`
+- `tests/trap-cases.json`
 
 # If Judgment Logic Changes
 

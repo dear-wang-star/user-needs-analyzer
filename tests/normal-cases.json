@@ -1,1 +1,15 @@
-[]
+[
+  {
+    "case_id": "normal_single_feature_request",
+    "description": "Validate the complete fictional single-feature-request example under examples/single-feature-request.",
+    "command": "python3 scripts/validate_evidence_links.py --evidence-table examples/single-feature-request/evidence-table.md --need-cards examples/single-feature-request/need-card-N001.md --ranking examples/single-feature-request/needs-ranking.md --report examples/single-feature-request/final-report.md --json",
+    "expected_exit_code": 0,
+    "expected_rule_ids": [],
+    "forbidden_rule_ids": [
+      "TRC020",
+      "TRC025",
+      "TRC034"
+    ],
+    "notes": "The complete example should remain traceable end to end with no blocking error."
+  }
+]

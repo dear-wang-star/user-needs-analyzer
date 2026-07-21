@@ -1,0 +1,20 @@
+Analysis ID: A001
+Case: single-feature-request
+Collection date: 2026-07-21
+Product context: Enterprise operations data management platform
+Scenario: Recurring reporting and downstream data preparation
+
+E001 | P001 | user_verbatim
+"I hope the platform can support bulk export. Copying records one by one for the weekly report is too troublesome."
+
+E002 | P001 | historical_behavior
+P001 organizes around 30 business records every week, usually by copying them one by one into Excel. One reporting cycle takes about 40 minutes.
+
+E003 | P002 | user_verbatim
+"I do not necessarily need Excel. I mainly need a faster way to pull this batch of data out so I can keep working on it."
+
+E004 | P002 | observed_behavior
+During one data-preparation task, P002 repeated the sequence "open detail -> copy -> return to list" 18 times, missed 2 records, and then rechecked the list.
+
+E005 | P003 | user_verbatim
+"I only look at this once or twice a month, so copying one by one is still acceptable for me."

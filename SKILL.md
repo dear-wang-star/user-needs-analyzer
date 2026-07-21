@@ -190,11 +190,11 @@ because the current `[barrier or workaround]` causes `[cost or loss]`.
 
 Load only the reference files needed for the current stage.
 
-- During evidence typing, load [references/evidence-taxonomy.md](/Users/wangxiaohui/projects/user-needs-analyzer/references/evidence-taxonomy.md:1).
-- During solution stripping and issue classification, load [references/need-vs-solution.md](/Users/wangxiaohui/projects/user-needs-analyzer/references/need-vs-solution.md:1).
-- During validity judgment, load [references/requirement-validation.md](/Users/wangxiaohui/projects/user-needs-analyzer/references/requirement-validation.md:1).
-- During evidence-strength assessment, load [references/evidence-strength.md](/Users/wangxiaohui/projects/user-needs-analyzer/references/evidence-strength.md:1).
-- During need-side ranking, load [references/prioritization-rules.md](/Users/wangxiaohui/projects/user-needs-analyzer/references/prioritization-rules.md:1).
+- During evidence typing, load `references/evidence-taxonomy.md`.
+- During solution stripping and issue classification, load `references/need-vs-solution.md`.
+- During validity judgment, load `references/requirement-validation.md`.
+- During evidence-strength assessment, load `references/evidence-strength.md`.
+- During need-side ranking, load `references/prioritization-rules.md`.
 
 Do not copy full reference files into the final output. Use them as rules, then cite the relevant judgment succinctly.
 

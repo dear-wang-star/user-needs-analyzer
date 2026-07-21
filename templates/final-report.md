@@ -68,7 +68,7 @@ missing_context_summary: ""
 ```
 
 Reference artifact:
-- [evidence-table.md](/Users/wangxiaohui/projects/user-needs-analyzer/templates/evidence-table.md:1)
+- [evidence-table.md](evidence-table.md)
 
 ## 5. Key User Needs
 
@@ -123,7 +123,7 @@ invalid_or_out_of_scope: ""
 ## 9. Needs Ranking
 
 Reference artifact:
-- [needs-ranking.md](/Users/wangxiaohui/projects/user-needs-analyzer/templates/needs-ranking.md:1)
+- [needs-ranking.md](needs-ranking.md)
 
 Include:
 - ranking summary
