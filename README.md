@@ -1,7 +1,23 @@
 # user-needs-analyzer
 An evidence-based skill for analyzing user feedback and extracting validated user needs.
 
-项目正在建设中，当前阶段仅搭建工程骨架与实施计划。
+V1.0 is available for analyzing interviews, user feedback, support tickets, and survey free-text responses.
+
+## Core Capabilities
+
+- Evidence classification and traceability
+- Separation of real user needs from user-proposed solutions
+- Requirement validity judgment
+- Counterexample review and user-segment difference checks
+- Relative need-side prioritization
+
+## Usage
+
+```text
+Please use user-needs-analyzer to analyze the following user feedback,
+and follow SKILL.md to output an evidence table, user need cards,
+needs ranking, and an analysis report.
+```
 
 ## Structure
 
